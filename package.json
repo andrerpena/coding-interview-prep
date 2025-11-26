@@ -1,0 +1,29 @@
+{
+  "name": "coding-interview-prep",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/andrerpena/coding-interview-prep#readme",
+  "bugs": {
+    "url": "https://github.com/andrerpena/coding-interview-prep/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrerpena/coding-interview-prep.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
