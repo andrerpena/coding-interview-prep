@@ -1,11 +1,18 @@
 type Func = (...args: any[]) => any
 
-export function curry(fn: Func): Func {
-  return function curried(...args: any[]): any {
-    if (args.length >= fn.length) {
-      return fn(...args)
+export function curry(fn: Func): any {
+  const expectedArgsCount = fn.length
+  let accumulatedArgs: any[] = []
+  const curried = (...args: any[]) => {
+    for (const arg of args) {
+      accumulatedArgs.push(arg)
     }
-
-    return (...nextArgs: any[]) => curried(...args.concat(nextArgs))
+    if (accumulatedArgs.length === expectedArgsCount) {
+      const accumulatedArgsCopy = [...accumulatedArgs]
+      accumulatedArgs = []
+      return fn(...accumulatedArgsCopy)
+    }
+    return curried
   }
+  return curried
 }

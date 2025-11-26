@@ -2,6 +2,9 @@ import { describe, expect, it } from 'vitest'
 import { curry } from './solution'
 
 describe('curry', () => {
+  // it('custom', () => {
+  //   const curried()
+  // })
   it('should work with all arguments at once', () => {
     const join = (a: number, b: number, c: number) => `${a}_${b}_${c}`
     const curriedJoin = curry(join)
