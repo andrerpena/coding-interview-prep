@@ -1,7 +1,5 @@
 # Curry Function
 
-## Difficulty: Beginner
-
 ## Description
 
 Currying is a useful technique used in JavaScript applications. It transforms a function that takes multiple arguments into a sequence of functions that each take a single argument.
