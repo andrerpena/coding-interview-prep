@@ -28,11 +28,13 @@ Each challenge folder contains:
 ## Available Commands
 
 ```bash
-npm test          # Run all tests
-npm run test:ui   # Run tests with UI
-npm run lint      # Check code quality
-npm run lint:fix  # Fix linting issues
-npm run format    # Format code
+npm test                              # Run all tests (watch mode)
+npm test -- --run                     # Run all tests once
+npm test -- --run src/challenges/foo  # Run tests for a specific challenge
+npm run test:ui                       # Run tests with UI
+npm run lint                          # Check code quality
+npm run lint:fix                      # Fix linting issues
+npm run format                        # Format code
 ```
 
 ## Working with Claude Code
