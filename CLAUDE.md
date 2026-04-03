@@ -18,6 +18,7 @@ Each challenge folder contains:
 - `challenge.md` - Problem description and requirements
 - `solution.js` - Implementation of the solution
 - `solution.test.js` - Unit tests using Vitest
+- `scratch.md` - Empty scratch file for notes
 
 ## Technologies
 
@@ -53,8 +54,13 @@ Examples:
 Claude will:
 1. Create the appropriate folder structure
 2. Write a clear problem description in `challenge.md`
-3. Implement the solution in `solution.js`
-4. Add comprehensive tests in `solution.test.js`
+3. Implement the **full working solution** in `solution.js`
+4. Add comprehensive tests in `solution.test.js` (8-15 test cases covering happy path, edge cases, and boundary values)
+5. **Run the tests** (`npm test -- --run src/challenges/<name>`) to verify they all pass against the real implementation
+6. **Clear the solution body**, leaving only the function stub with its signature and JSDoc (e.g. `export function foo() {}`) — the user will implement it themselves
+7. **Create an empty `scratch.md`** file in the challenge folder
+
+Steps 3-6 are mandatory. Tests must be validated against a working implementation before being handed off as an exercise. Never skip the verification step.
 
 ## Challenge Levels
 
